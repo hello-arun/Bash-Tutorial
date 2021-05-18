@@ -1,0 +1,59 @@
+&CONTROL
+    calculation   = "vc-relax"
+    forc_conv_thr =  1.00000e-05
+    pseudo_dir    = "/ibex/scratch/jangira/qe/pseudo/"
+    outdir = "./out"    
+    tefield  = .true.
+/
+
+&SYSTEM
+    a     =  3.87795
+    degauss     =  0.01
+    ecutrho     =  250
+    ecutwfc     =  60
+    ibrav       = 0
+    nat         = 4
+    ntyp        = 2
+    occupations = "smearing"
+    smearing    = "gaussian"
+    emaxpos          =   0.95
+    eopreg           =   0.10
+    edir             =   3
+    eamp             =   0.0140
+/
+
+&ELECTRONS
+    conv_thr         =  1.00000e-10
+    electron_maxstep = 200
+    mixing_beta      =  7.00000e-01
+/
+
+&IONS
+    ion_dynamics = "bfgs"
+/
+
+&CELL
+    cell_dynamics  = "bfgs"
+    cell_dofree = "xy"
+/
+
+
+K_POINTS (automatic)
+ 16 16 1  0 0 0
+
+ATOMIC_SPECIES
+Ge     72.61000  Ge.pbe-n-kjpaw_psl.1.0.0.UPF
+Se     78.96000  Se.pbe-n-kjpaw_psl.1.0.0.UPF
+
+
+CELL_PARAMETERS (alat)
+   1.099671598   0.000000000   0.000000000
+   0.000000000   1.026178751   0.000000000
+   0.000000000   0.000000000   5.157400000
+
+ATOMIC_POSITIONS (crystal)
+Ge            0.0982377121        0.2500000000        0.4277359489
+Ge            0.5982268869        0.7500000000        0.5483267158
+Se            0.5144973502        0.7500000000        0.4225042897
+Se            0.0144940508        0.2500000000        0.5535580456
+
