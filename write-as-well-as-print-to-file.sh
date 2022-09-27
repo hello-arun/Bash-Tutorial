@@ -1,11 +1,11 @@
 #!/bin/bash
 # Courtesy : Mohammed Ghadiyali
 
-# This thing only print to file
+# This thing only write to file
 echo "volume of cell" > out1.log
 echo "dipole moment"  >> out1.log
 
-# This thing will print as well as write to file 
+# This thing will print to terminal as well as write to file 
 echo "volume of cell" | tee out2.log
 echo "dipole moment"  | tee -a out2.log
 
