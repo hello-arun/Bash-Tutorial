@@ -28,9 +28,13 @@ sed "s-Pineapple-Feta-" input.txt
 sed "s Pineapple Feta " input.txt
 ```
 
-Change complete line containing txt ABC
+Change complete line containing txt 'ABC' with 'hello world'
 ```
-sed -i "/ABC/c\ABC=1" input.txt
+# Case Sensitive
+sed -i "/ABC/c\hello word" input.txt
+
+# Case Insensitive
+sed -i "/abc/Ic\hello word" input.txt
 ```
 
 Some actions based on line numbers
